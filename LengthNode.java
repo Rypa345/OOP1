@@ -1,4 +1,4 @@
-package Belajarhuffmanmain;
+package huffmanmain;
 /**
  *
  * @author RYPA

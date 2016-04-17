@@ -1,4 +1,4 @@
-package belajarhuffmanmain;
+package huffmanmain;
 
 /**
  *
