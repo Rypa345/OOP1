@@ -1,29 +1,27 @@
-package com.bangundatar.abstrak;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package bangundatar4;
+import java.util.Scanner;
 
-public class Segitiga extends BangunDatar {
+public class Segitiga implements BangunDatar4 {
     int alas, ab, ac, bc, keliling, tinggi;
     float luas;
 
-    public Segitiga(float luas, int alas, int ab, int ac, int bc, int keliling, int tinggi) {
-        this.luas = luas;
+    public Segitiga(int alas, int ab, int ac, int bc, int keliling, int tinggi, float luas) {
         this.alas = alas;
         this.ab = ab;
         this.ac = ac;
         this.bc = bc;
         this.keliling = keliling;
         this.tinggi = tinggi;
+        this.luas = luas;
     }
 
     Segitiga() {
         
-    }
-
-    public float getLuas() {
-        return luas;
-    }
-
-    public void setLuas(float luas) {
-        this.luas = luas;
     }
 
     public int getAlas() {
@@ -73,23 +71,49 @@ public class Segitiga extends BangunDatar {
     public void setTinggi(int tinggi) {
         this.tinggi = tinggi;
     }
-    
-    
-    
-    @Override
-    void hitungLuas() {
-        bc = 5;
-        tinggi = 3;
-        luas = (float) (0.5 * bc * tinggi);
-        System.out.println("Luas Segitiga:" + " " +luas);
+
+    public float getLuas() {
+        return luas;
+    }
+
+    public void setLuas(float luas) {
+        this.luas = luas;
     }
 
     @Override
-    void hitungKeliling() {
-        ab = 5;
-        ac = 4;
-        bc = 6;
+    public void hitungLuas() {
+        System.out.println("Masukkan nilai bc: ");
+        Scanner sc = new Scanner(System.in);
+        int bc = sc.nextInt();
+        
+        System.out.println("Masukkan nilai tinggi: ");
+        Scanner ss = new Scanner(System.in);
+        int tinggi = ss.nextInt();
+        
+        luas = (float) (0.5 * bc * tinggi);
+        System.out.println("Luas Segitiga adalah " +luas);
+    }
+
+    @Override
+    public void hitungKeliling() {
+        System.out.println("Masukkan nilai ab: ");
+        Scanner sc = new Scanner(System.in);
+        int ab = sc.nextInt();
+        
+        System.out.println("Masukkan nilai ab: ");
+        Scanner ss = new Scanner(System.in);
+        int ac = ss.nextInt();
+        
+        System.out.println("Masukkan nilai ab: ");
+        Scanner sd = new Scanner(System.in);
+        int bc = sd.nextInt();
+        
         keliling = ab + ac + bc;
-        System.out.println("Keliling Segitiga:" + " " +keliling);
+        System.out.println("Keliling Segitiga adalah " +keliling);
+    }
+
+    @Override
+    public void volume() {
+        
     }
 }

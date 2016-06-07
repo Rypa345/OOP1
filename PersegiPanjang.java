@@ -1,6 +1,13 @@
-package com.bangundatar.abstrak;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package bangundatar4;
 
-public class PersegiPanjang extends BangunDatar{
+import java.util.Scanner;
+
+public class PersegiPanjang implements BangunDatar4 {
     int luas, panjang, lebar, keliling;
 
     public PersegiPanjang(int luas, int panjang, int lebar, int keliling) {
@@ -47,19 +54,33 @@ public class PersegiPanjang extends BangunDatar{
     }
 
     @Override
-    void hitungLuas() {
-        panjang = 6;
-        lebar = 4;
-        luas = panjang * lebar;
-        System.out.println("Luas Persegi Panjang:" + " " +luas);
+    public void hitungLuas() {
+       System.out.println("Masukkan nilai panjang: ");
+       Scanner sc = new Scanner(System.in);
+       int panjang = sc.nextInt();
+       
+       System.out.println("Masukkan nilai lebar: ");
+       Scanner ss = new Scanner(System.in);
+       int lebar = sc.nextInt();
+       luas = panjang * lebar;
+       System.out.println("Luas Persegi Panjang adalah " +luas);
     }
 
     @Override
-    void hitungKeliling() {
-        panjang = 6;
-        lebar = 5;
-        keliling = 2 * (panjang + lebar);
-        System.out.println("Keliling Persegi Panjang" + " " +keliling);
+    public void hitungKeliling() {
+       System.out.println("Masukkan nilai panjang: ");
+       Scanner sc = new Scanner(System.in);
+       int panjang = sc.nextInt();
+       
+       System.out.println("Masukkan nilai lebar: ");
+       Scanner ss = new Scanner(System.in);
+       int lebar = sc.nextInt();
+       keliling = 2 * (panjang + lebar);
+        System.out.println("Keliling Persegi Panjang adalah " +keliling);
     }
-    
+
+    @Override
+    public void volume() {
+        
+    }
 }

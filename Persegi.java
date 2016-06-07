@@ -1,12 +1,23 @@
-package com.bangundatar.abstrak;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package bangundatar4;
 
-public class Persegi extends BangunDatar {
-    int luas, sisi, keliling;
+/**
+ *
+ * @author RYPA345
+ */
+import java.util.Scanner;
 
-    public Persegi(int luas, int sisi, int keliling) {
+public class Persegi implements BangunDatar4{
+    int luas, keliling, sisi;
+
+    public Persegi(int luas, int keliling, int sisi) {
         this.luas = luas;
-        this.sisi = sisi;
         this.keliling = keliling;
+        this.sisi = sisi;
     }
 
     Persegi() {
@@ -21,6 +32,14 @@ public class Persegi extends BangunDatar {
         this.luas = luas;
     }
 
+    public int getKeliling() {
+        return keliling;
+    }
+
+    public void setKeliling(int keliling) {
+        this.keliling = keliling;
+    }
+
     public int getSisi() {
         return sisi;
     }
@@ -29,30 +48,29 @@ public class Persegi extends BangunDatar {
         this.sisi = sisi;
     }
 
-    public int getKeliling() {
-        return keliling;
-    }
-
-    public void setKeliling(int keliling) {
-        this.keliling = keliling;
-    }
-    
-    
-
     @Override
-    void hitungLuas() {
-        sisi = 5;
+    public void hitungLuas() {
+        
+        System.out.println("Masukkan nilai sisi1: ");
+        Scanner sc = new Scanner(System.in);
+        int sisi = sc.nextInt();
         luas = sisi * sisi;
         System.out.println("Luas Persegi:" + " " +luas);
     }
-    
 
     @Override
-    void hitungKeliling() {
-        sisi = 6;
+    public void hitungKeliling() {
+        System.out.println("Masukkan nilai sisi: ");
+        Scanner sc = new Scanner(System.in);
+        int sisi = sc.nextInt();
         keliling = 4 * sisi;
-        System.out.println("Keliling Persegi:" + " " +keliling);
-    
+        System.out.println("Keliling Persegi:" + " " +keliling); 
     }
+
+    @Override
+    public void volume() {
+        
+    }
+    
     
 }
